@@ -13,7 +13,7 @@ Associations:
 * `Student.all` should return all of the student instances
 * `Student#add_boating_test` should take in a  a boating test name (String), a boating test status (String), and an Instructor (Object)
   - It should initialize a new boating test with a Student (Object), a boating test name (String), a boating test status (String), and an Instructor (Object)
-* `Student.find_student` will take in a first name and output the student (Object) with that name
+* `Student.find_student` will take in a first name and return the student (Object) with that name
 * `Student#grade_percentage` should return the percentage of tests that the student has passed, a Float (so if a student has passed 3 / 9 tests that they've taken, this method should return the Float `33.33`)
 
 `BoatingTest` class:
@@ -23,8 +23,10 @@ Associations:
 `Instructor` class:
 * initialize with a name
 * `Instructor.all` should return all instructors
-* `Instructor#pass_student` should take in a student instance and test name. If there is a `BoatingTest` whose name and student match the values passed in, this method should update the status of that BoatingTest to 'passed'. If there is no matching test, this method should create a test with the student, that boat test name, and the status 'passed'. Either way, it should return the `BoatingTest` instance.
-* `Instructor#fail_student` should take in a student instance and test name. Like `#pass_student`, it should try to find a matching `BoatingTest` and update its status to 'failed'. If it cannot find an existing `BoatingTest`, it should create one with the name, the matching student, and the status 'failed'.
+* `Instructor#pass_student` should take in a student instance and test name. 
+- If there is a `BoatingTest` whose name and student match the values passed in, this method should update the status of that BoatingTest to 'passed'. If there is no matching test, this method should create a test with the student, that boat test name, and the status 'passed'. Either way, it should return the `BoatingTest` instance.
+* `Instructor#fail_student` should take in a student instance and test name. 
+- Like `#pass_student`, it should try to find a matching `BoatingTest` and update its status to 'failed'. If it cannot find an existing `BoatingTest`, it should create one with the name, the matching student, and the status 'failed'.
 
 Run `ruby tools/console.rb` in console to try out your code. You can add seed data to this file to have some sample objects to try out.
 
