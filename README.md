@@ -8,20 +8,17 @@ Associations:
 
 [chart]: https://curriculum-content.s3.amazonaws.com/module-1/ruby-oo-relationships/practice-boating-school-exercise/Image_123_00BoatingSchool.png
 
-`Student` class:
-* should initialize with `first_name`
+`Student` class should initialize with `first_name`
 * `Student.all` should return all of the student instances
 * `Student#add_boating_test` should take in a  a boating test name (String), a boating test status (String), and an Instructor (Object)
   - It should initialize a new boating test with a Student (Object), a boating test name (String), a boating test status (String), and an Instructor (Object)
 * `Student.find_student` will take in a first name and return the student (Object) with that name
 * `Student#grade_percentage` should return the percentage of tests that the student has passed, a Float (so if a student has passed 3 / 9 tests that they've taken, this method should return the Float `33.33`)
 
-`BoatingTest` class:
-* should initialize with Student (Object), a boating test name (String), a boating test status (String), and an Instructor (Object)
+`BoatingTest` class should initialize with Student (Object), a boating test name (String), a boating test status (String), and an Instructor (Object)
 * `BoatingTest.all` returns an array of all boating tests
 
-`Instructor` class:
-* initialize with a name
+`Instructor` class initialize with a name
 * `Instructor.all` should return all instructors
 * `Instructor#pass_student` should take in a student instance and test name. 
   - If there is a `BoatingTest` whose name and student match the values passed in, this method should update the status of that BoatingTest to 'passed'. If there is no matching test, this method should create a test with the student, that boat test name, and the status 'passed'. Either way, it should return the `BoatingTest` instance.
